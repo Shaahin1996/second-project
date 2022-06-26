@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <!-- css file -->
     <link rel="stylesheet" href="./assets/styles/css/main.css">
-
+    <!-- swiper css cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- font awesome js cdn -->
+    <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
+    <!-- font awesome css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>IN.design</title>
 </head>
@@ -101,38 +106,264 @@
                 </div>
                 <div class="product__filterCase">
                     <h3 class="product__filterCase__title">Price range</h3>
-                    <input class="product__filterCase__range" type="range">
+                    <!-- <section class="range-slider container">
+                        <span class="output outputOne"></span>
+                        <span class="output outputTwo"></span>
+                        <span class="full-range"></span>
+                        <span class="incl-range"></span>
+                        <input name="rangeOne" value="10" min="0" max="100" step="1" type="range">
+                        <input name="rangeTwo" value="90" min="0" max="100" step="1" type="range">
+                    </section> -->
                     <div class="product__filterCase__checkBox">
                         <span class="product__filterCase__checkBox__title">Novelties</span>
-                        <input class="product__filterCase__checkBox__btn" type="checkbox">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                     <div class="product__filterCase__checkBox">
                         <span class="product__filterCase__checkBox__title">Discounted products</span>
-                        <input class="product__filterCase__checkBox__btn" type="checkbox">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
-                <!-- sidebar end -->
-
-                <!-- main content start -->
-                <div class="col-8"></div>
-                <!-- main content end -->
             </div>
+            <!-- sidebar end -->
+
+            <!-- main content start -->
+            <div class="col-8">
+                <div class="swiper mySwiper customSwiper">
+                    <div class="swiper-wrapper customSwiper__wrapper">
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper mySwiper customSwiper">
+                    <div class="swiper-wrapper customSwiper__wrapper">
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide customSwiper__slide">
+                            <div class="card">
+                                <div class="card__header">
+                                    <i class="fa-duotone fa-heart"></i>
+                                    <span class="card__new">New</span>
+                                </div>
+                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <div class="card__footer">
+                                    <a class="card__detail" href="#">View details</a>
+                                    <span class="card__price">$249</span>
+                                    <span class="card__cta">+</span>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <div class="card__desc__title">Chairs</div>
+                                <div class="card__desc__text">Modern white <br> chair</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main content end -->
+        </div>
     </section>
     <!-- product end -->
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
 
 
@@ -146,64 +377,67 @@
                     <input class="footer__newsletter__input" type="text">
                     <p class="footer__newsletter__text">Sign up to receive special offers!</p>
                     <div class="footer__somedia">
-                        <img class="footer__somedia__icon" src="./assets/images/soMedia/being.png" alt="being">
-                        <img class="footer__somedia__icon" src="./assets/images/soMedia/ig.png" alt="instagram">
-                        <img class="footer__somedia__icon" src="./assets/images/soMedia/facebook.png" alt="facebook">
+                        <img class="footer__somedia__icon" src="./assets/images/somedia/being.png" alt="being">
+                        <img class="footer__somedia__icon" src="./assets/images/somedia/ig.png" alt="instagram">
+                        <img class="footer__somedia__icon" src="./assets/images/somedia/facebook.png" alt="facebook">
                     </div>
                 </div>
                 <div class="footer__contactUs">
                     <h4 class="footer__contactUs__title">
                         Contact s
                     </h4>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
-                    <p class="footer__contactUs__text">Service</p>
-                </div>
-                <div class="footer__contactUs">
-                    <h4 class="footer__contactUs__title">
-                        Contact s
-                    </h4>
-                    <p class="footer__contactUs__text" >About us</p>
-                    <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
-                    <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
-                    <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
                 </div>
                 <div class="footer__contactUs">
                     <h4 class="footer__contactUs__title">
                         Contact s
                     </h4>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
-                    <p class="footer__contactUs__text" >About us</p>
+                    <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
                 </div>
-               
+                <div class="footer__contactUs">
+                    <h4 class="footer__contactUs__title">
+                        Contact s
+                    </h4>
+                    <p class="footer__contactUs__text">About us</p>
+                    <p class="footer__contactUs__text">Service</p>
+                    <p class="footer__contactUs__text">About us</p>
+                    <p class="footer__contactUs__text">Service</p>
+                    <p class="footer__contactUs__text">About us</p>
+                    <p class="footer__contactUs__text">Service</p>
+                    <p class="footer__contactUs__text">About us</p>
+                    <p class="footer__contactUs__text">Service</p>
+                </div>
+
             </div>
             <div class="footer__separator">
             </div>
         </div>
-
     </footer>
 
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
+    <!-- range plugin js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- bootstrap js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <!-- swiper js cdn -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- custom js file -->
+    <script src="./assets/js/custom.js"></script>
 </body>
 
 </html>
