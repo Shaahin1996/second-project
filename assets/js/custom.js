@@ -1,6 +1,6 @@
 // swipers
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
@@ -9,17 +9,13 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
     breakpoints: {
-      640: {
+      570: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      992: {
         slidesPerView: 4,
         spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 50,
       },
     },
   });

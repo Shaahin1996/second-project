@@ -26,12 +26,19 @@ li {
     background-position: center;
     height: 100px;
 
+    @include md {
+        height: 80px;
+    }
+
+    @include xs {
+        height: 30px;
+        margin-bottom: $xxSmall;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90vw;
-        margin: 0 auto;
         height: 100%;
     }
 
@@ -39,29 +46,80 @@ li {
         font-size: 28px;
         font-weight: $fwLarge;
         color: $pureDark;
+
+        @include xl {
+            font-size: 24px;
+        }
+
+        @include lg {
+            font-size: 20px;
+        }
+
+        @include md {
+            font-size: 16px;
+        }
+
+        @include xs {
+            font-size: 12px;
+        }
     }
 
     &__ul {
         display: flex;
         justify-content: space-between;
-        width: 31vw;
+
+        @include sm {
+            display: none;
+        }
 
         &__li {
             font-family: Poppins;
             font-size: 18px;
             font-weight: $fwMedium;
             color: $pureDark;
+            margin-right: 12px;
+
+            @include xl {
+                font-size: 15px;
+            }
+
+            @include lg {
+                font-size: 13px;
+            }
+
+            @include lg {
+                font-size: 11px;
+                margin-right: 9px;
+            }
+
         }
     }
 
     &__icon {
         display: flex;
-        width: 6vw;
         justify-content: space-between;
 
         &__image {
             width: 20px;
             height: 20px;
+            margin-right: 10px;
+
+            @include lg {
+                width: 15px;
+                height: 15px;
+            }
+
+            @include md {
+                width: 13px;
+                height: 13px;
+                margin-right: 7px;
+            }
+
+            @include xs {
+                width: 10px;
+                height: 10px;
+                margin-right: 6px;
+            }
         }
     }
 
@@ -70,21 +128,46 @@ li {
         flex-direction: column;
         align-items: end;
 
+        @include sm {
+            display: none;
+        }
+
         &__number {
             font-size: 18px;
             font-weight: $fwLarge;
             color: $pureDark;
+
+            @include xl {
+                font-size: 15px;
+            }
+
+            @include lg {
+                font-size: 13px;
+            }
+
+            @include md {
+                font-size: 11px;
+            }
         }
 
         &__orderCall {
             font-size: 16px;
             font-weight: $fwMedium;
             color: $mainGreen;
+
+            @include xl {
+                font-size: 13px;
+            }
+
+            @include lg {
+                font-size: 11px;
+            }
+
+            @include md {
+                font-size: 9px;
+            }
         }
     }
-
-
-
 }
 
 .header {
@@ -92,8 +175,21 @@ li {
     margin-bottom: $mediumSize;
     position: relative;
 
+    @include md {
+        margin-bottom: $smallSize;
+    }
+
+    @include xs {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     &__breadcrumb {
         background-color: transparent;
+
+        @include sm {
+            display: none;
+        }
 
         &__item {
             font-size: 22px;
@@ -101,6 +197,14 @@ li {
             line-height: 1.64;
             letter-spacing: 0.44px;
             color: $whiteGray;
+
+            @include xl {
+                font-size: 19px;
+            }
+
+            @include lg {
+                font-size: 16px;
+            }
 
             &:hover {
                 color: $mainGreen;
@@ -116,9 +220,19 @@ li {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0;
         height: 200px;
 
+        @include lg {
+            height: 170px;
+        }
+
+        @include sm {
+            height: 120px;
+        }
+
+        @include xs {
+            height: 90px;
+        }
 
         &__title {
             font-size: 77px;
@@ -126,6 +240,22 @@ li {
             line-height: 1.21;
             letter-spacing: 3.52;
             color: $pureDark;
+
+            @include xl {
+                font-size: 70px;
+            }
+
+            @include lg {
+                font-size: 60px;
+            }
+
+            @include sm {
+                font-size: 40px;
+            }
+
+            @include xs {
+                font-size: 20px;
+            }
         }
 
         &__text {
@@ -134,6 +264,26 @@ li {
             line-height: 1.24;
             letter-spacing: 0.58px;
             color: $midGray;
+
+            @include xl {
+                font-size: 24px;
+            }
+
+            @include lg {
+                font-size: 20px;
+            }
+
+            @include md {
+                font-size: 15px;
+            }
+
+            @include sm {
+                font-size: 11px;
+            }
+
+            @include xs {
+                font-size: 8px;
+            }
         }
     }
 
@@ -145,6 +295,28 @@ li {
             right: 0;
             width: 570px;
             height: 200px;
+
+            @include lg {
+                width: 450px;
+                height: 150px;
+            }
+
+            @include md {
+                width: 350px;
+                height: 150px;
+            }
+
+            @include md {
+                width: 150px;
+                height: 100px;
+                margin-right: 10px;
+            }
+
+            @include md {
+                width: 90px;
+                height: 60px;
+                margin-right: 10px;
+            }
         }
     }
 
@@ -154,15 +326,48 @@ li {
         background-color: $secondaryGreen;
         margin-top: $mediumSize;
 
+        @include md {
+            margin-top: $smallSize;
+            height: 3px;
+        }
+
+        @include xs {
+            display: none;
+        }
     }
 }
 
 .product {
     margin-top: $mediumSize;
 
+    @include md {
+        margin-top: $xSmall;
+    }
+
+    @include xs {
+        margin-top: 0;
+    }
+
+    &--responsiveEmptyCol {
+        @include md {
+            display: none;
+        }
+    }
+
+    &--responsiveSidebar {
+        @include md {
+            display: none;
+        }
+    }
+
+    &--responsiveContent {
+        @include md {
+            width: 100% !important;
+        }
+    }
+
     &__filterResult {
         background-color: $mainGreen;
-        width: 140px;
         border-radius: 23px;
         padding: 11px;
         color: $pureWhite;
@@ -171,6 +376,42 @@ li {
         line-height: 1.8;
         letter-spacing: 0.3px;
         margin-bottom: $mediumSize;
+
+        @include md {
+            background-color: #0d6b6a;
+            border-radius: 20px;
+            padding: 8px;
+            color: #fff;
+            margin-right: 2px;
+            font-size: 9px;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+            margin-bottom: $smallSize;
+        }
+
+        @include xs {
+            background-color: #0d6b6a;
+            border-radius: 20px;
+            padding: 5px 3px;
+            color: #fff;
+            margin-right: 2px;
+            font-size: 7px;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+            margin-bottom: $xSmall;
+        }
+
+        &__cross {
+            width: 22px;
+
+            @include md {
+                width: 18px;
+            }
+
+            @include xs {
+                width: 14px;
+            }
+        }
     }
 
     &__search {
@@ -178,6 +419,10 @@ li {
         border: none;
         position: relative;
         margin-top: $mediumSize;
+
+        &:parent {
+            display: none;
+        }
 
         &__searchBox {
             border: none;
@@ -224,6 +469,10 @@ li {
             display: flex;
             justify-content: space-between;
 
+            @include xl {
+                font-size: 19px;
+            }
+
             &--active {
                 color: $mainGreen  !important;
             }
@@ -256,16 +505,33 @@ li {
                 color: $pureDark;
                 margin-top: 20px;
 
+                @include xl {
+                    font-size: 16px;
+                }
             }
         }
     }
+
+
 }
 
 .customSwiper {
     margin-top: $smallSize;
 
+    @include md {
+        margin-top: $xxSmall;
+    }
+
+    @include xs {
+        margin-top: 0;
+    }
+
     &__wrapper {
         padding-top: $smallSize;
+
+        @include xs {
+            padding-top: $xxSmall;
+        }
     }
 
     &__slide {
@@ -284,6 +550,28 @@ li {
     justify-content: space-between;
     align-items: center;
 
+    @include md {
+        width: 245px;
+        padding: 20px;
+        height: 300px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include xs {
+        width: 130px;
+        height: 180px;
+        padding: 15px;
+        background-color: $pureWhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -297,11 +585,31 @@ li {
         font-size: 12px;
         letter-spacing: 0.24px;
         line-height: 1.17;
+
+        @include md {
+            padding: 3px 10px;
+            font-size: 10px;
+        }
+
+        @include xs {
+            padding: 3px 7px;
+            font-size: 7px;
+        }
     }
 
     &__image {
         width: 315px;
         height: 274px;
+
+        @include md {
+            width: 170px;
+            height: 140px;
+        }
+
+        @include xs {
+            width: 110px;
+            height: 80px;
+        }
     }
 
     &__footer {
@@ -312,6 +620,14 @@ li {
         justify-content: space-between;
         padding: 14px 30px;
         background-color: $primaryWhite;
+
+        @include md {
+            padding: 10px 20px;
+        }
+
+        @include xs {
+            padding: 7px 11px;
+        }
     }
 
     &__detail {
@@ -319,6 +635,14 @@ li {
         line-height: 1.17;
         letter-spacing: 0.24px;
         color: $gray;
+
+        @include md {
+            font-size: 10px;
+        }
+
+        @include md {
+            font-size: 8px;
+        }
     }
 
     &__price {
@@ -327,19 +651,36 @@ li {
         line-height: 0.88;
         letter-spacing: 0.32px;
         color: $pureDark;
+
+        @include md {
+            font-size: 13px;
+        }
+
+        @include xs {
+            font-size: 10px;
+        }
     }
 
-    &__cta {
+    &__atc {
         background-color: $pureWhite;
         border-radius: 31px;
         padding: 5px 10px;
         position: absolute;
         right: -14px;
         color: $mainGreen;
+
+        @include xs {
+            padding: 0 5px;
+            right: -10px;
+        }
     }
 
     &__desc {
         margin-top: $xSmall;
+
+        @include xs {
+            margin-top: $xxSmall;
+        }
 
         &__title {
             font-size: 22px;
@@ -347,6 +688,14 @@ li {
             line-height: 1.64;
             letter-spacing: 0.44px;
             color: $whiteGray;
+
+            @include md {
+                font-size: 17px;
+            }
+
+            @include xs {
+                font-size: 9px;
+            }
         }
 
         &__text {
@@ -355,6 +704,18 @@ li {
             line-height: 1.24;
             letter-spacing: 0.58px;
             color: $pureDark;
+
+            @include xl {
+                font-size: 25px;
+            }
+
+            @include md {
+                font-size: 20px;
+            }
+
+            @include xs {
+                font-size: 11px;
+            }
         }
     }
 }
@@ -364,11 +725,27 @@ li {
     background-color: $mainGreen;
     margin-top: $largeSize;
 
+    @include sm {
+        margin-top: $xSmall;
+        padding: 10px;
+    }
+
+    @include xs {
+        display: none;
+    }
+
     &__container {
         display: flex;
-        width: inherit;
         justify-content: space-between;
         margin-top: 120px;
+
+        @include xl {
+            margin-top: 90px;
+        }
+
+        @include sm {
+            margin-top: $xSmall;
+        }
     }
 
     &__newsletter {
@@ -381,10 +758,43 @@ li {
             line-height: 1.5;
             color: $pureWhite;
             margin-bottom: $smallSize;
+
+            @include sm {
+                margin-bottom: $xSmall;
+                font-size: 18px;
+            }
         }
 
         &__input {
+            display: flex;
+            align-items: baseline;
+        }
+
+        &__search {
+            width: 345px;
+            height: 92px;
+            background-color: $mainGreen;
+            border: solid 1px $pureWhite;
             margin-bottom: $xSmall;
+
+            &::placeholder {
+                color: #fff;
+                transform: translateX(56px);
+
+                @include md {
+                    transform: translateX(30px);
+                }
+            }
+
+            @include sm {
+                width: 200px;
+            }
+        }
+
+        &__arrow {
+            color: $pureWhite;
+            transform: translateX(-98px);
+            padding: 36px 40px;
         }
 
         &__text {
@@ -393,6 +803,11 @@ li {
             line-height: 1.5;
             color: $pureWhite;
             margin-bottom: $smallSize;
+
+            @include sm {
+                margin-bottom: $xSmall;
+                font-size: 13px;
+            }
         }
     }
 
@@ -402,15 +817,28 @@ li {
             width: 60px;
             height: 60px;
             margin-right: $xSmall;
+
+            @include sm {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
         }
     }
 
     &__separator {
-        width: inherit;
         height: 4px;
         opacity: 0.16;
         background-color: $pureWhite;
-        margin: 100px 0;
+        margin: 90px 0;
+
+        @include xl {
+            margin: 70px 0;
+        }
+
+        @include xl {
+            margin: 50px 0;
+        }
     }
 
     &__contactUs {
@@ -422,6 +850,11 @@ li {
             line-height: 1.5;
             color: $pureWhite;
             margin-bottom: $smallSize;
+
+            @include sm {
+                margin-top: $xSmall;
+                font-size: 17px;
+            }
         }
 
         &__text {
@@ -430,9 +863,14 @@ li {
             line-height: 1.5;
             color: $pureWhite;
             margin-bottom: $xxSmall;
+
+            @include sm {
+                font-size: 15px;
+            }
         }
     }
 }
+
 
 // buttons plugin
 .switch {
@@ -440,15 +878,15 @@ li {
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -458,9 +896,9 @@ li {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -470,29 +908,29 @@ li {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: $mainGreen;
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px $mainGreen;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  .slider.round {
+}
+
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
 
 
 // //   range plugin

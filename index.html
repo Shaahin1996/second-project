@@ -8,14 +8,14 @@
     <!-- bootstrap css file -->
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <!-- css file -->
-    <link rel="stylesheet" href="./assets/styles/css/main.css">
     <!-- swiper css cdn -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <!-- font awesome js cdn -->
     <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
     <!-- font awesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="./assets/styles/css/main.css">
 
     <title>IN.design</title>
 </head>
@@ -78,16 +78,16 @@
     <!-- product start -->
     <section class="container product">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-8">
-                <span class="product__filterResult">Novelties <img src="./assets/images/icons/cross.png"
-                        alt="cross"></span>
-                <span class="product__filterResult">Discounted <img src="./assets/images/icons/cross.png"
-                        alt="cross"></span>
+            <div class="col-4 product--responsiveEmptyCol"></div>
+            <div class="col-md-8">
+                <span class="product__filterResult">Novelties <img class="product__filterResult__cross"
+                        src="./assets/images/icons/cross.png" alt="cross"></span>
+                <span class="product__filterResult">Discounted <img class="product__filterResult__cross"
+                        src="./assets/images/icons/cross.png" alt="cross"></span>
             </div>
 
             <!-- sidebar start -->
-            <div class="col-4">
+            <div class="col-4 product--responsiveSidebar">
                 <div class=" product__search">
                     <input class="product__search__searchBox" type="text" placeholder="Search for articles">
                     <span class="product__search__icon"><i class="fa fa-search"></i>
@@ -133,7 +133,7 @@
             <!-- sidebar end -->
 
             <!-- main content start -->
-            <div class="col-8">
+            <div class="col-8 product--responsiveContent">
                 <div class="swiper mySwiper customSwiper">
                     <div class="swiper-wrapper customSwiper__wrapper">
                         <div class="swiper-slide customSwiper__slide">
@@ -142,11 +142,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -160,11 +160,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -178,11 +178,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -196,11 +196,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -214,11 +214,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -232,11 +232,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -254,11 +254,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -272,11 +272,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -290,11 +290,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -308,11 +308,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -326,11 +326,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-1.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -344,11 +344,11 @@
                                     <i class="fa-duotone fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
-                                <div class="card__image"><img src="./assets/images/products/product-3.png" alt=""></div>
+                                <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__cta">+</span>
+                                    <span class="card__atc">+</span>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -364,17 +364,16 @@
     </section>
     <!-- product end -->
 
-
-
-
-
-
+    <!-- footer start -->
     <footer class="footer">
         <div class="container">
             <div class="footer__container">
                 <div class="footer__newsletter">
                     <div class="footer__newsletter__title">NEWLETTER</div>
-                    <input class="footer__newsletter__input" type="text">
+                    <div class="footer__newsletter__input">
+                        <input class="footer__newsletter__search" placeholder="Your E-mail" type="text">
+                        <a class="footer__newsletter__arrow">&rarr;</a>
+                    </div>
                     <p class="footer__newsletter__text">Sign up to receive special offers!</p>
                     <div class="footer__somedia">
                         <img class="footer__somedia__icon" src="./assets/images/somedia/being.png" alt="being">
@@ -384,7 +383,7 @@
                 </div>
                 <div class="footer__contactUs">
                     <h4 class="footer__contactUs__title">
-                        Contact s
+                        Contact us
                     </h4>
                     <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
@@ -397,7 +396,7 @@
                 </div>
                 <div class="footer__contactUs">
                     <h4 class="footer__contactUs__title">
-                        Contact s
+                        Contact us
                     </h4>
                     <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
@@ -410,7 +409,7 @@
                 </div>
                 <div class="footer__contactUs">
                     <h4 class="footer__contactUs__title">
-                        Contact s
+                        Contact us
                     </h4>
                     <p class="footer__contactUs__text">About us</p>
                     <p class="footer__contactUs__text">Service</p>
@@ -427,6 +426,7 @@
             </div>
         </div>
     </footer>
+    <!-- footer start -->
 
     <!-- range plugin js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
