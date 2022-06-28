@@ -14,6 +14,8 @@
     <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
     <!-- font awesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font awesome icon -->
+    <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
     <!-- css file -->
     <link rel="stylesheet" href="./assets/styles/css/main.css">
 
@@ -28,12 +30,24 @@
                 IN.design
             </div>
             <ul class="navbar__ul">
-                <li class="navbar__ul__li">Home</li>
-                <li class="navbar__ul__li">About Us</li>
-                <li class="navbar__ul__li">Service</li>
-                <li class="navbar__ul__li">Portfolio</li>
-                <li class="navbar__ul__li">Shop</li>
-                <li class="navbar__ul__li">Contacts</li>
+                <a href="#">
+                    <li class="navbar__ul__li">Home</li>
+                </a>
+                <a href="#">
+                    <li class="navbar__ul__li">About Us</li>
+                </a>
+                <a href="#">
+                    <li class="navbar__ul__li">Service</li>
+                </a>
+                <a href="#">
+                    <li class="navbar__ul__li">Portfolio</li>
+                </a>
+                <a href="#">
+                    <li class="navbar__ul__li">Shop</li>
+                </a>
+                <a href="#">
+                    <li class="navbar__ul__li">Contacts</li>
+                </a>
             </ul>
             <div class="navbar__icon">
                 <img class="navbar__icon__image" src="./assets/images/icons/add-to-card.png" alt="add to card">
@@ -80,17 +94,23 @@
         <div class="row">
             <div class="col-4 product--responsiveEmptyCol"></div>
             <div class="col-md-8">
-                <span class="product__filterResult">Novelties <img class="product__filterResult__cross"
-                        src="./assets/images/icons/cross.png" alt="cross"></span>
-                <span class="product__filterResult">Discounted <img class="product__filterResult__cross"
-                        src="./assets/images/icons/cross.png" alt="cross"></span>
+                <span class="product__filterResult" id="filterResultNovelties">
+                    Novelties
+                    <img onclick="handleSwitcherNovelties()" class="product__filterResult__cross"
+                        src="./assets/images/icons/cross.png" alt="cross">
+                </span>
+                <span class="product__filterResult" id="filterResultDiscounted">
+                    Discounted
+                    <img onclick="handleSwitcherDiscounted()" class="product__filterResult__cross"
+                        src="./assets/images/icons/cross.png" alt="cross">
+                </span>
             </div>
-
             <!-- sidebar start -->
-            <div class="col-4 product--responsiveSidebar">
+            <div class="col-4 product--responsiveSidebar" id="sidebar">
                 <div class=" product__search">
                     <input class="product__search__searchBox" type="text" placeholder="Search for articles">
-                    <span class="product__search__icon"><i class="fa fa-search"></i>
+                    <span class="product__search__icon">
+                        <a href="#"><i class="fa fa-search"></i></a>
                     </span>
                 </div>
                 <div class="product__catalog">
@@ -117,14 +137,14 @@
                     <div class="product__filterCase__checkBox">
                         <span class="product__filterCase__checkBox__title">Novelties</span>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="filterCheckboxNovelties">
                             <span class="slider round"></span>
                         </label>
                     </div>
                     <div class="product__filterCase__checkBox">
                         <span class="product__filterCase__checkBox__title">Discounted products</span>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="filterCheckboxDiscounted">
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -133,20 +153,21 @@
             <!-- sidebar end -->
 
             <!-- main content start -->
-            <div class="col-8 product--responsiveContent">
+            <div class="col-12 col-lg-8 product--responsiveContent">
+               <i onclick="handleProductHamburgerMenu()" class="fa-solid fa-bars product__hamburgerMenu" id="productHamburgerMenu"></i>
                 <div class="swiper mySwiper customSwiper">
                     <div class="swiper-wrapper customSwiper__wrapper">
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><a href="#"><span class="card__atc">+</span></a></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -157,14 +178,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -175,14 +196,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -193,14 +214,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -211,14 +232,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -229,14 +250,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 2">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -251,14 +272,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -269,14 +290,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -287,14 +308,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -305,14 +326,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -323,14 +344,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-1.png" alt="product 1">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -341,14 +362,14 @@
                         <div class="swiper-slide customSwiper__slide">
                             <div class="card">
                                 <div class="card__header">
-                                    <i class="fa-duotone fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
                                     <span class="card__new">New</span>
                                 </div>
                                 <img class="card__image" src="./assets/images/products/product-3.png" alt="product 3">
                                 <div class="card__footer">
                                     <a class="card__detail" href="#">View details</a>
                                     <span class="card__price">$249</span>
-                                    <span class="card__atc">+</span>
+                                    <a href="#"><span class="card__atc">+</span></a>
                                 </div>
                             </div>
                             <div class="card__desc">
@@ -372,13 +393,16 @@
                     <div class="footer__newsletter__title">NEWLETTER</div>
                     <div class="footer__newsletter__input">
                         <input class="footer__newsletter__search" placeholder="Your E-mail" type="text">
-                        <a class="footer__newsletter__arrow">&rarr;</a>
+                        <a href="#" class="footer__newsletter__arrow">&rarr;</a>
                     </div>
                     <p class="footer__newsletter__text">Sign up to receive special offers!</p>
                     <div class="footer__somedia">
-                        <img class="footer__somedia__icon" src="./assets/images/somedia/being.png" alt="being">
-                        <img class="footer__somedia__icon" src="./assets/images/somedia/ig.png" alt="instagram">
-                        <img class="footer__somedia__icon" src="./assets/images/somedia/facebook.png" alt="facebook">
+                        <a href="https://being.com"><img class="footer__somedia__icon"
+                                src="./assets/images/somedia/being.png" alt="being"></a>
+                        <a href="https://instagram.com"><img class="footer__somedia__icon"
+                                src="./assets/images/somedia/ig.png" alt="instagram"></a>
+                        <a href="https://facebook.com"><img class="footer__somedia__icon"
+                                src="./assets/images/somedia/facebook.png" alt="facebook"></a>
                     </div>
                 </div>
                 <div class="footer__contactUs">

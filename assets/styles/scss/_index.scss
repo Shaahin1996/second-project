@@ -12,6 +12,11 @@ body {
 
 a {
     text-decoration: none !important;
+    color: $pureWhite;
+}
+
+a:hover {
+    color: $pureWhite;
 }
 
 li {
@@ -338,7 +343,6 @@ li {
 }
 
 .product {
-    margin-top: $mediumSize;
 
     @include md {
         margin-top: $xSmall;
@@ -360,9 +364,34 @@ li {
         }
     }
 
-    &--responsiveContent {
+    &__hamburgerMenu {
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        position: absolute;
+        top: -30px;
+        right: 0;
+        display: none;
+
         @include md {
-            width: 100% !important;
+            display: block;
+            font-size: $xSmall;
+            top: -40px;
+            right: 0;
+        }
+
+        @include sm {
+            font-size: $xSmall;
+            top: -15px;
+            right: 5vw;
+        }
+
+        @include xs {
+            font-size: $xxSmall;
+            top: -15px;
+            right: 5vw;
         }
     }
 
@@ -375,7 +404,7 @@ li {
         font-size: 15px;
         line-height: 1.8;
         letter-spacing: 0.3px;
-        margin-bottom: $mediumSize;
+        margin-bottom: 0;
 
         @include md {
             background-color: #0d6b6a;
@@ -418,7 +447,7 @@ li {
         box-shadow: -3px -3px 30px 0 rgba(0, 0, 0, 0.1);
         border: none;
         position: relative;
-        margin-top: $mediumSize;
+        margin-top: $smallSize;
 
         &:parent {
             display: none;
@@ -516,15 +545,7 @@ li {
 }
 
 .customSwiper {
-    margin-top: $smallSize;
-
-    @include md {
-        margin-top: $xxSmall;
-    }
-
-    @include xs {
-        margin-top: 0;
-    }
+    margin-top: 0;
 
     &__wrapper {
         padding-top: $smallSize;
