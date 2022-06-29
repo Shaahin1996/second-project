@@ -77,7 +77,7 @@ li {
             display: none;
         }
 
-        &__li {
+        &__a {
             font-family: Poppins;
             font-size: 18px;
             font-weight: $fwMedium;
@@ -92,7 +92,7 @@ li {
                 font-size: 13px;
             }
 
-            @include lg {
+            @include md {
                 font-size: 11px;
                 margin-right: 9px;
             }
@@ -173,10 +173,66 @@ li {
             }
         }
     }
+
+    &__menu {
+        display: none;
+    }
+
+    &__toggleNav {
+        background-color: $mainGreen;
+        display: block;
+
+        // @include sm {
+        //     display: block;
+        // }
+
+        &__ul {
+            position: relative;
+            height: max-content;
+            padding-bottom: 10px;
+
+            &__li {
+                width: max-content;
+                padding-top: 2%;
+
+                &__a {
+                    width: max-content;
+
+                    @include xs {
+                        font-size: 9px;
+                    }
+
+                    &:hover {
+                        opacity: .8;
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__hamburgerMenu {
+        display: none;
+        right: 0;
+        font-size: 30px;
+
+        @include md {
+            font-size: $xSmall;
+        }
+
+        @include sm {
+            display: block;
+            font-size: $xSmall;
+        }
+
+        @include xs {
+            font-size: $xxSmall;
+        }
+    }
 }
 
 .header {
-    margin-top: $mediumSize;
+    margin-top: $smallSize;
     margin-bottom: $mediumSize;
     position: relative;
 
@@ -311,13 +367,13 @@ li {
                 height: 150px;
             }
 
-            @include md {
+            @include sm {
                 width: 150px;
                 height: 100px;
                 margin-right: 10px;
             }
 
-            @include md {
+            @include xs {
                 width: 90px;
                 height: 60px;
                 margin-right: 10px;
@@ -352,21 +408,38 @@ li {
         margin-top: 0;
     }
 
+
     &--responsiveEmptyCol {
+
         @include md {
             display: none;
         }
     }
 
     &--responsiveSidebar {
+
         @include md {
             display: none;
         }
     }
 
+    @include md {
+
+        &__toggleSidebar {
+            display: block;
+            position: absolute;
+            z-index: 99;
+            opacity: 1;
+            background-color: rgba(13, 107, 106, 0.9);
+            width: 50%;
+            left: 0;
+            height: max-content;
+        }
+    }
+
     &__hamburgerMenu {
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
 
@@ -384,7 +457,7 @@ li {
 
         @include sm {
             font-size: $xSmall;
-            top: -15px;
+            top: -30px;
             right: 5vw;
         }
 
@@ -449,6 +522,10 @@ li {
         position: relative;
         margin-top: $smallSize;
 
+        @include xs {
+            height: 35px;
+        }
+
         &:parent {
             display: none;
         }
@@ -457,6 +534,19 @@ li {
             border: none;
             padding: 20px 30px;
             width: 79%;
+
+            @include md {
+                width: 75%;
+            }
+
+            @include sm {
+                width: 60%;
+            }
+
+            @include xs {
+                height: 35px;
+                padding: 1px;
+            }
         }
 
         &__icon {
@@ -466,11 +556,21 @@ li {
             right: 0;
             font-size: 20px;
             background-color: $mainGreen;
-            width: 80px;
             height: -webkit-fill-available;
             padding: 16px 27px;
             border-radius: 0px 6px 6px 1px;
             color: $pureWhite;
+
+            @include md {
+                font-size: 21px;
+                right: auto;
+            }
+
+            @include xs {
+                font-size: 10px;
+                padding: 12px;
+                text-align: center;
+            }
         }
     }
 
@@ -479,6 +579,10 @@ li {
         padding: 50px 40px;
         margin-top: $smallSize;
 
+        @include xs {
+            padding: 0;
+        }
+
         &__title {
             font-size: 25px;
             font-weight: $fwMedium;
@@ -486,6 +590,14 @@ li {
             letter-spacing: 0.5px;
             color: $pureDark;
             margin-top: 0 !important;
+
+            @include md {
+                font-size: 21px;
+            }
+
+            @include xs {
+                font-size: 18px;
+            }
         }
 
         &__item {
@@ -502,6 +614,14 @@ li {
                 font-size: 19px;
             }
 
+            @include md {
+                font-size: 16px;
+            }
+
+            @include xs {
+                font-size: 12px;
+            }
+
             &--active {
                 color: $mainGreen  !important;
             }
@@ -513,12 +633,31 @@ li {
         padding: 50px 40px;
         margin-top: $smallSize;
 
+        @include xs {
+            padding: 0;
+        }
+
         &__title {
             font-size: 25px;
             font-weight: $fwLarge;
             line-height: 1.44;
             letter-spacing: 0.5px;
             color: $pureDark;
+
+            @include xl {
+                font-size: 21px;
+                color: $pureWhite;
+            }
+
+            @include md {
+                font-size: 17px;
+                width: max-content;
+            }
+
+            @include xs {
+                font-size: 14px;
+                width: max-content;
+            }
         }
 
         &__checkBox {
@@ -535,7 +674,19 @@ li {
                 margin-top: 20px;
 
                 @include xl {
-                    font-size: 16px;
+                    font-size: 17px;
+                }
+
+                @include md {
+                    font-size: 13px;
+                    color: $pureWhite;
+                }
+
+                @include xs {
+                    flex-wrap: wrap;
+                    font-size: 10px;
+                    width: 100%;
+                    color: $pureWhite;
                 }
             }
         }
@@ -689,6 +840,7 @@ li {
         position: absolute;
         right: -14px;
         color: $mainGreen;
+        top: 2px;
 
         @include xs {
             padding: 0 5px;
@@ -899,6 +1051,21 @@ li {
     display: inline-block;
     width: 60px;
     height: 34px;
+
+    @include lg {
+        width: 55px;
+        height: 30px;
+    }
+
+    @include md {
+        width: 43px;
+        height: 25px;
+    }
+
+    @include xs {
+        width: 34px;
+        height: 21px;
+    }
 }
 
 .switch input {
@@ -929,6 +1096,21 @@ li {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
+
+    @include lg {
+        width: 22px;
+        height: 22px;
+    }
+
+    @include md {
+        width: 18px;
+        height: 18px;
+    }
+
+    @include xs {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 input:checked+.slider {

@@ -14,6 +14,9 @@
     <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
     <!-- font awesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- font awesome icon -->
     <script src="https://kit.fontawesome.com/023878a3ed.js" crossorigin="anonymous"></script>
     <!-- css file -->
@@ -30,24 +33,12 @@
                 IN.design
             </div>
             <ul class="navbar__ul">
-                <a href="#">
-                    <li class="navbar__ul__li">Home</li>
-                </a>
-                <a href="#">
-                    <li class="navbar__ul__li">About Us</li>
-                </a>
-                <a href="#">
-                    <li class="navbar__ul__li">Service</li>
-                </a>
-                <a href="#">
-                    <li class="navbar__ul__li">Portfolio</li>
-                </a>
-                <a href="#">
-                    <li class="navbar__ul__li">Shop</li>
-                </a>
-                <a href="#">
-                    <li class="navbar__ul__li">Contacts</li>
-                </a>
+                <li> <a class="navbar__ul__a" href="#"> Home </a></li>
+                <li> <a class="navbar__ul__a" href="#"> About Us </a></li>
+                <li> <a class="navbar__ul__a" href="#"> Service </a></li>
+                <li> <a class="navbar__ul__a" href="#"> Portfolio </a></li>
+                <li> <a class="navbar__ul__a" href="#"> Shop </a></li>
+                <li> <a class="navbar__ul__a" href="#"> Contacts </a></li>
             </ul>
             <div class="navbar__icon">
                 <img class="navbar__icon__image" src="./assets/images/icons/add-to-card.png" alt="add to card">
@@ -58,7 +49,27 @@
                 <div class="navbar__contactUs__number">+44 20 7722 0088</div>
                 <a class="navbar__contactUs__orderCall" href="#">Order a call</a>
             </div>
+            <i class="fa-solid fa-bars navbar__hamburgerMenu" id="navbarHamburgerMenu"></i>
         </div>
+    </section>
+    <section class="navbar__menu navbar__toggleNav" id="toggleNavbar">
+        <ul class="container navbar__toggleNav__ul">
+            <li class="navbar__toggleNav__ul__li">
+                <a class="navbar__toggleNav__ul__li__a" href="#">Home</a>
+            </li>
+            <li class="navbar__toggleNav__ul__li">
+                <a class="navbar__toggleNav__ul__li__a" href="#">About Us</a>
+            </li>
+            <li class="navbar__toggleNav__ul__li">
+                <a class="navbar__toggleNav__ul__li__a" href="#">Service</a>
+            </li>
+            <li class="navbar__toggleNav__ul__li">
+                <a class="navbar__toggleNav__ul__li__a" href="#">Portfolio</a>
+            </li>
+            <li class="navbar__toggleNav__ul__li">
+                <a class="navbar__toggleNav__ul__li__a" href="#">Shop</a>
+            </li>
+        </ul>
     </section>
     <!-- navbar end -->
 
@@ -154,7 +165,7 @@
 
             <!-- main content start -->
             <div class="col-12 col-lg-8 product--responsiveContent">
-               <i onclick="handleProductHamburgerMenu()" class="fa-solid fa-bars product__hamburgerMenu" id="productHamburgerMenu"></i>
+                <i class="fa-solid fa-bars product__hamburgerMenu" id="productHamburgerMenu"></i>
                 <div class="swiper mySwiper customSwiper">
                     <div class="swiper-wrapper customSwiper__wrapper">
                         <div class="swiper-slide customSwiper__slide">

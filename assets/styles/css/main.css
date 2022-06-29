@@ -81,7 +81,7 @@ li {
     display: none;
   }
 }
-.navbar__ul__li {
+.navbar__ul__a {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 500;
@@ -89,17 +89,17 @@ li {
   margin-right: 12px;
 }
 @media (max-width: 1400px) {
-  .navbar__ul__li {
+  .navbar__ul__a {
     font-size: 15px;
   }
 }
 @media (max-width: 1200px) {
-  .navbar__ul__li {
+  .navbar__ul__a {
     font-size: 13px;
   }
 }
-@media (max-width: 1200px) {
-  .navbar__ul__li {
+@media (max-width: 992px) {
+  .navbar__ul__a {
     font-size: 11px;
     margin-right: 9px;
   }
@@ -183,9 +183,58 @@ li {
     font-size: 9px;
   }
 }
+.navbar__menu {
+  display: none;
+}
+.navbar__toggleNav {
+  background-color: #0d6b6a;
+  display: block;
+}
+.navbar__toggleNav__ul {
+  position: relative;
+  height: max-content;
+  padding-bottom: 10px;
+}
+.navbar__toggleNav__ul__li {
+  width: max-content;
+  padding-top: 2%;
+}
+.navbar__toggleNav__ul__li__a {
+  width: max-content;
+}
+@media (max-width: 576px) {
+  .navbar__toggleNav__ul__li__a {
+    font-size: 9px;
+  }
+}
+.navbar__toggleNav__ul__li__a:hover {
+  opacity: 0.8;
+  display: inline;
+}
+.navbar__hamburgerMenu {
+  display: none;
+  right: 0;
+  font-size: 30px;
+}
+@media (max-width: 992px) {
+  .navbar__hamburgerMenu {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar__hamburgerMenu {
+    display: block;
+    font-size: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar__hamburgerMenu {
+    font-size: 15px;
+  }
+}
 
 .header {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   position: relative;
 }
@@ -332,14 +381,14 @@ li {
     height: 150px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .header__right__image {
     width: 150px;
     height: 100px;
     margin-right: 10px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .header__right__image {
     width: 90px;
     height: 60px;
@@ -384,6 +433,18 @@ li {
     display: none;
   }
 }
+@media (max-width: 992px) {
+  .product__toggleSidebar {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    opacity: 1;
+    background-color: rgba(13, 107, 106, 0.9);
+    width: 50%;
+    left: 0;
+    height: max-content;
+  }
+}
 .product__hamburgerMenu {
   position: absolute;
   top: -30px;
@@ -404,7 +465,7 @@ li {
 @media (max-width: 768px) {
   .product__hamburgerMenu {
     font-size: 30px;
-    top: -15px;
+    top: -30px;
     right: 5vw;
   }
 }
@@ -471,6 +532,11 @@ li {
   position: relative;
   margin-top: 50px;
 }
+@media (max-width: 576px) {
+  .product__search {
+    height: 35px;
+  }
+}
 .product__search:parent {
   display: none;
 }
@@ -479,6 +545,22 @@ li {
   padding: 20px 30px;
   width: 79%;
 }
+@media (max-width: 992px) {
+  .product__search__searchBox {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .product__search__searchBox {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .product__search__searchBox {
+    height: 35px;
+    padding: 1px;
+  }
+}
 .product__search__icon {
   display: inline-block;
   position: absolute;
@@ -486,16 +568,33 @@ li {
   right: 0;
   font-size: 20px;
   background-color: #0d6b6a;
-  width: 80px;
   height: -webkit-fill-available;
   padding: 16px 27px;
   border-radius: 0px 6px 6px 1px;
   color: #fff;
 }
+@media (max-width: 992px) {
+  .product__search__icon {
+    font-size: 21px;
+    right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .product__search__icon {
+    font-size: 10px;
+    padding: 12px;
+    text-align: center;
+  }
+}
 .product__catalog {
   box-shadow: -3px -3px 30px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 40px;
   margin-top: 50px;
+}
+@media (max-width: 576px) {
+  .product__catalog {
+    padding: 0;
+  }
 }
 .product__catalog__title {
   font-size: 25px;
@@ -504,6 +603,16 @@ li {
   letter-spacing: 0.5px;
   color: #000;
   margin-top: 0 !important;
+}
+@media (max-width: 992px) {
+  .product__catalog__title {
+    font-size: 21px;
+  }
+}
+@media (max-width: 576px) {
+  .product__catalog__title {
+    font-size: 18px;
+  }
 }
 .product__catalog__item {
   margin-top: 20px;
@@ -520,6 +629,16 @@ li {
     font-size: 19px;
   }
 }
+@media (max-width: 992px) {
+  .product__catalog__item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .product__catalog__item {
+    font-size: 12px;
+  }
+}
 .product__catalog__item--active {
   color: #0d6b6a !important;
 }
@@ -528,12 +647,35 @@ li {
   padding: 50px 40px;
   margin-top: 50px;
 }
+@media (max-width: 576px) {
+  .product__filterCase {
+    padding: 0;
+  }
+}
 .product__filterCase__title {
   font-size: 25px;
   font-weight: 600;
   line-height: 1.44;
   letter-spacing: 0.5px;
   color: #000;
+}
+@media (max-width: 1400px) {
+  .product__filterCase__title {
+    font-size: 21px;
+    color: #fff;
+  }
+}
+@media (max-width: 992px) {
+  .product__filterCase__title {
+    font-size: 17px;
+    width: max-content;
+  }
+}
+@media (max-width: 576px) {
+  .product__filterCase__title {
+    font-size: 14px;
+    width: max-content;
+  }
 }
 .product__filterCase__checkBox {
   display: flex;
@@ -550,7 +692,21 @@ li {
 }
 @media (max-width: 1400px) {
   .product__filterCase__checkBox__title {
-    font-size: 16px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  .product__filterCase__checkBox__title {
+    font-size: 13px;
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .product__filterCase__checkBox__title {
+    flex-wrap: wrap;
+    font-size: 10px;
+    width: 100%;
+    color: #fff;
   }
 }
 
@@ -704,6 +860,7 @@ li {
   position: absolute;
   right: -14px;
   color: #0d6b6a;
+  top: 2px;
 }
 @media (max-width: 576px) {
   .card__atc {
@@ -913,6 +1070,24 @@ li {
   width: 60px;
   height: 34px;
 }
+@media (max-width: 1200px) {
+  .switch {
+    width: 55px;
+    height: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .switch {
+    width: 43px;
+    height: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .switch {
+    width: 34px;
+    height: 21px;
+  }
+}
 
 .switch input {
   opacity: 0;
@@ -942,6 +1117,24 @@ li {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+@media (max-width: 1200px) {
+  .slider:before {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media (max-width: 992px) {
+  .slider:before {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .slider:before {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 input:checked + .slider {

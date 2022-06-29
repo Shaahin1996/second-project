@@ -48,6 +48,13 @@ function handleSwitcherDiscounted() {
   $("#filterResultDiscounted").hide(100);
 }
 
+$('#productHamburgerMenu').click(function () {
+  $('#sidebar').toggleClass('product__toggleSidebar');
+})
+
+$('#navbarHamburgerMenu').click(function () {
+  $('#toggleNavbar').toggleClass('navbar__toggleNav');
+})
 
 //   var rangeOne = document.querySelector('input[name="rangeOne"]'),
 //   rangeTwo = document.querySelector('input[name="rangeTwo"]'),
