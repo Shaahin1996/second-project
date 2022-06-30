@@ -182,10 +182,6 @@ li {
         background-color: $mainGreen;
         display: block;
 
-        // @include sm {
-        //     display: block;
-        // }
-
         &__ul {
             position: relative;
             height: max-content;
@@ -398,11 +394,20 @@ li {
     }
 }
 
-.product {
+.toggleWrapperHide{
+    display: none;
+}
 
-    @include md {
-        margin-top: $xSmall;
-    }
+.toggleWrapper {
+    display: block;
+    background-color: $mainGreen;
+    width: 100vw;
+    height: max-content;
+    z-index: 999999;
+    opacity: .5;
+}
+
+.product {
 
     @include xs {
         margin-top: 0;
@@ -426,6 +431,7 @@ li {
     @include md {
 
         &__toggleSidebar {
+            margin-top: $xSmall;
             display: block;
             position: absolute;
             z-index: 99;
@@ -436,6 +442,7 @@ li {
             height: max-content;
         }
     }
+
 
     &__hamburgerMenu {
 
@@ -1017,6 +1024,10 @@ li {
     &__contactUs {
         text-align: right;
 
+        @include md {
+            display: none;
+        }
+
         &__title {
             font-size: 22px;
             font-weight: $fwMedium;
@@ -1134,144 +1145,3 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
-
-// //   range plugin
-// .range-slider {
-//     position: relative;
-//     width: 200px;
-//     height: 35px;
-//     text-align: center;
-// }
-
-// .range-slider input {
-//     pointer-events: none;
-//     position: absolute;
-//     overflow: hidden;
-//     left: 0;
-//     top: 15px;
-//     width: 200px;
-//     outline: none;
-//     height: 18px;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// .range-slider input::-webkit-slider-thumb {
-//     pointer-events: all;
-//     position: relative;
-//     z-index: 1;
-//     outline: 0;
-// }
-
-// .range-slider input::-moz-range-thumb {
-//     pointer-events: all;
-//     position: relative;
-//     z-index: 10;
-//     -moz-appearance: none;
-//     width: 9px;
-// }
-
-// .range-slider input::-moz-range-track {
-//     position: relative;
-//     z-index: -1;
-//     background-color: rgba(0, 0, 0, 1);
-//     border: 0;
-// }
-
-// .range-slider input:last-of-type::-moz-range-track {
-//     -moz-appearance: none;
-//     background: none transparent;
-//     border: 0;
-// }
-
-// .range-slider input[type=range]::-moz-focus-outer {
-//   border: 0;
-// }
-
-// .rangeValue {
-//   width: 30px;
-// }
-
-// .output {
-//   position: absolute;
-//   border:1px solid #999;
-//   width: 40px;
-//   height: 30px;
-//   text-align: center;
-//   color: #999;
-//   border-radius: 4px;
-//   display: inline-block;
-//   font: bold 15px/30px Helvetica, Arial;
-//   bottom: 75%;
-//   left: 50%;
-//   transform: translate(-50%, 0);
-// }
-
-// .output.outputTwo {
-//   left: 100%;
-// }
-
-// .container {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//           transform: translate(-50%, -50%);
-// }
-
-// input[type=range] {
-//   -webkit-appearance: none;
-//   background: none;
-// }
-
-// input[type=range]::-webkit-slider-runnable-track {
-//   height: 5px;
-//   border: none;
-//   border-radius: 3px;
-//   background: transparent;
-// }
-
-// input[type=range]::-ms-track {
-//   height: 5px;
-//   background: transparent;
-//   border: none;
-//   border-radius: 3px;
-// }
-
-// input[type=range]::-moz-range-track {
-//   height: 5px;
-//   background: transparent;
-//   border: none;
-//   border-radius: 3px;
-// }
-
-// input[type=range]::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-//   border: none;
-//   height: 16px;
-//   width: 16px;
-//   border-radius: 50%;
-//   background: #555;
-//   margin-top: -5px;
-//   position: relative;
-//   z-index: 10000;
-// }
-
-// input[type=range]::-ms-thumb {
-//   -webkit-appearance: none;
-//   border: none;
-//   height: 16px;
-//   width: 16px;
-//   border-radius: 50%;
-//   background: #555;
-//   margin-top: -5px;
-//   position: relative;
-//   z-index: 10000;
-// }
-
-// input[type=range]::-moz-range-thumb {
-//   -webkit-appearance: none;
-//   border: none;
-//   height: 16px;
-//   width: 16px;}
