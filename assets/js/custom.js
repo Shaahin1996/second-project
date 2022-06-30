@@ -52,10 +52,6 @@ $('#productHamburgerMenu').click(function () {
   $('#sidebar').toggleClass('product__toggleSidebar');
 })
 
-$('#productHamburgerMenu').click(function () {
-  $('#toggleWrapper').toggleClass('toggleWrapper');
-})
-
 $('#navbarHamburgerMenu').click(function () {
   $('#toggleNavbar').toggleClass('navbar__toggleNav');
 })

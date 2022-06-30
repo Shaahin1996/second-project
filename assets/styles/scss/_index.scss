@@ -394,19 +394,6 @@ li {
     }
 }
 
-.toggleWrapperHide{
-    display: none;
-}
-
-.toggleWrapper {
-    display: block;
-    background-color: $mainGreen;
-    width: 100vw;
-    height: max-content;
-    z-index: 999999;
-    opacity: .5;
-}
-
 .product {
 
     @include xs {
